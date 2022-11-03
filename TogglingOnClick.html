@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <button onclick="stopColor()">Stop Toggling</button>
+    <script>
+        let toggle = 1;
+        document.body.style.color = "pink"
+        let intervalId = setInterval(setColor,3000)
+
+        function setColor(){
+            console.log("called")
+            if(toggle == 1){
+                document.bgColor = "pink"
+                toggle = 2
+            }
+            else if(toggle == 2){ 
+                document.bgColor = "yellow"
+                toggle = 1
+            }
+        }
+        function stopColor(){
+            clearInterval(intervalId)
+            console.log("cleared")
+        }
+    </script>
+</body>
+</html>
