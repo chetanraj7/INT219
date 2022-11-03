@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+#mouse{
+background-color: antiquewhite;
+margin: 20px 10px;
+padding: 10px 20px;
+}
+</style>
+</head>
+<body>
+<div>
+<p id="mouse">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis earum delectus adipisci facere, voluptas ab consectetur qui unde repellat officiis.</p>
+</div>
+
+
+<script>
+const mouse = document.getElementById("mouse");
+mouse.onmouseover = function(event) {
+let target = event.target;
+target.style.background = 'yellow';
+};
+
+mouse.onmouseout = function(event) {
+let target = event.target;
+target.style.background = 'grey';
+}
+</script>
+</body>
+</html>
